@@ -35,6 +35,10 @@ __include: moqi.yaml:/opencc_config # 拆分 英汉互译 火星文
 __include: moqi.yaml:/punctuator # 标点
 __include: moqi.yaml:/guide # 引导前缀配置
 
+engine:
+  processors:
+    - lua_processor@*processor
+
 speller:
   max_code_length: 5
   # table_translator翻译器，支持自动上屏。例如 “zmhu”可以自动上屏“怎么回事”
